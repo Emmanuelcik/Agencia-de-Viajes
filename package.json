@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Emmanuelcik/Agencia-de-Viajes.git"
