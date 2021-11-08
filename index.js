@@ -12,9 +12,15 @@ const app = express();
 //     // })
 //     res.render(); //Se utiliza para mostrar una vista
 // });
-app.use("/", router);
 
 const port = process.env.PORT || 4000;
+
+//Habilitar pug 
+app.set("view engine", "pug")
+
+app.use("/", router);
+
+
 app.listen(port, () => {
     console.log(`Servidor funcionando en el puerto ${port}`)
 })
