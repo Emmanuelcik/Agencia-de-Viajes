@@ -12,8 +12,12 @@ const app = express();
 //     // })
 //     res.render(); //Se utiliza para mostrar una vista
 // });
-
+//Definir puerto
 const port = process.env.PORT || 4000;
+
+
+//Definir la carpeta publica
+app.use(express.static("public"));
 
 //Habilitar pug 
 app.set("view engine", "pug")
