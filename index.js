@@ -15,12 +15,22 @@ const app = express();
 //Definir puerto
 const port = process.env.PORT || 4000;
 
+//Habilitar pug 
+app.set("view engine", "pug");
+
+//Obtener el año actual
+app.use( (req, res, next) =>{
+
+    const year = new Date();
+
+    res.locals.currentYear = year.getFullYear();
+
+    next();
+});
 
 //Definir la carpeta publica
 app.use(express.static("public"));
 
-//Habilitar pug 
-app.set("view engine", "pug")
 
 app.use("/", router);
 

@@ -19,7 +19,9 @@ h2 {
 h3 {
     font-size: 3rem;
 }
-
+.img-header{
+    max-height: 90px;
+}
 .btn-success {
     background-color: #DC135F;
     border-color: #DC135F;
