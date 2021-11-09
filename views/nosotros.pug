@@ -1,6 +1,31 @@
 extends ./layout/index
 
 block contenido
-    p Nosotros 
+    main.container.mt-5 
+        .row 
+            .col-md-5
+                img(src="img/nosotros.jpg", alt="Imagen sobre nosotros", class="img-fluid")
 
-    img(src="img/cupon.jpg")
+            .col-md-7
+                h1 #{pagina}
+                blockquote ipsum dolor sit amet consectetur adipisicing elit. Sed cum ratione reprehenderit dolores ad nesciunt mollitia nam deserunt architecto, a nulla. Eius tenetur perspiciatis reprehenderit doloremque possimus amet delectus similique.
+                
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse tenetur nisi nesciunt necessitatibus blanditiis et, mollitia eos commodi atque nemo in, voluptatum obcaecati error. Dignissimos delectus rerum velit laudantium doloribus.
+
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perspiciatis corporis modi aliquid deleniti nam recusandae sit iure, nobis et alias molestias illum vitae eum eos at veniam vel repellendus!
+    
+    .listado-iconos
+        .container.mt-5.py-5.text-center 
+            .row 
+                .col-md-4 
+                    img(src="img/icono_seguridad.svg", alt="Icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sit distinctio laborum sapiente ducimus necessitatibus in obcaecati omni
+                .col-md-4 
+                    img(src="img/icono_destinos.svg", alt="Icono destinos", class="img-fluid mb-4")
+                    h2.mb-4 Destinos
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sit distinctio laborum sapiente ducimus necessitatibus in obcaecati omni
+                .col-md-4 
+                    img(src="img/icono_precios.svg", alt="Icono precios", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Precios
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sit distinctio laborum sapiente ducimus necessitatibus in obcaecati omni

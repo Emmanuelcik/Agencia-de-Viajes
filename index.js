@@ -24,6 +24,7 @@ app.use( (req, res, next) =>{
     const year = new Date();
 
     res.locals.currentYear = year.getFullYear();
+    res.locals.nombreCitio = "Agencia de Viajes";
 
     next();
 });
