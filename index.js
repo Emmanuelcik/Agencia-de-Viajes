@@ -1,5 +1,7 @@
 import express from "express";
 import router from "./routes/index.js";
+import db from "./config/db.js";
+
 const app = express();
 
 //Definir puerto
@@ -13,6 +15,13 @@ const app = express();
 //     res.render(); //Se utiliza para mostrar una vista
 // });
 //Definir puerto
+
+
+//Conectar a la BD
+db.authenticate()
+    .then( () => console.log("Base de datos conectada"))
+    .catch( err => console.log(err));
+    
 const port = process.env.PORT || 4000;
 
 //Habilitar pug 

@@ -19,7 +19,9 @@
   "homepage": "https://github.com/Emmanuelcik/Agencia-de-Viajes#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.2"
+    "mysql2": "^2.3.3-rc.0",
+    "pug": "^3.0.2",
+    "sequelize": "^6.9.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
