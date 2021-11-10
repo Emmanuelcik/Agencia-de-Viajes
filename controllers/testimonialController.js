@@ -18,10 +18,14 @@ const guardarTestimonial = async (req, res ) =>{
         errores.push({mensaje: "El mensaje esta vacio"});
     }
 
+    //Consultar testimoniales existentes
     
+    const testimoniales = await Testimonial.findAll();
+
     if(errores.length > 0 ){
         res.render("testimoniales", {
             pagina: "Testimoniales",
+            testimoniales,
             errores,
             nombre,
             correo,
@@ -29,6 +33,8 @@ const guardarTestimonial = async (req, res ) =>{
         });
         res.redirect("/testimoniales");
     }else {
+
+    
         //Almacenar en la base de datos
 
         try {

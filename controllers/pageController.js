@@ -1,4 +1,5 @@
 import { Viaje } from "../models/Viaje.js";
+import { Testimonial } from "../models/Testimoniales.js";
 
 const paginaInicio = (req, res) =>{ //Req lo que enviamos : - res  lo que express nos responde
     
@@ -26,11 +27,17 @@ const paginaViajes = async (req, res) =>{
     });
 };
 
-const testimoniales = (req, res) =>{
+const testimoniales = async (req, res) =>{
 
-    res.render("testimoniales", {
-        pagina: "Testimoniales"
-    });
+    try {
+        const testimoniales = await Testimonial.findAll();
+        res.render("testimoniales", {
+            pagina: "Testimoniales",
+            testimoniales,
+        });
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 //Muestra un viaje por su slug
